@@ -1,6 +1,26 @@
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+
+html {
+    font-family: sans-serif;
+    background: #fffefe;
+}
+
+h1 {
+    font-weight: 200;
+    width: fit-content;
+    margin: 0.5em auto;
+    margin-bottom: 1em;
+}
+
+p {
+    max-width: 50em;
+    margin: 1em auto;
+}
+
 #slidercontainer {
     max-width: 40em;
     margin: 0 auto;
+    margin-top: 6em;
     display: grid;
     grid-template-columns: min-content auto min-content;
 }
@@ -8,11 +28,62 @@
 #slider {
     width: 100%;
     grid-column: 2;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.25em;
+    background: purple;
+    outline: none;
+    margin: auto auto;
+}
+
+#slider::-webkit-slider-thumb {
+    transition: transform .1s;
+}
+
+#slider::-moz-range-thumb {
+    transition: transform .1s;
+}
+
+
+#slider:hover::-webkit-slider-thumb {
+    background: #cc00cc;
+    transform: scale(1.5);
+}
+
+#slider:hover::-moz-range-thumb {
+    background: #cc00cc;
+    transform: scale(1.5);
+}
+
+#slider:hover {
+    background: #cc00cc;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: purple;
+}
+
+#slider::-moz-range-thumb {
+    width: 1em;
+    height: 1em;
+    background: purple;
+    border: none;
 }
 
 .sliderlabel {
     width: auto;
     margin: 0 1em;
+}
+
+@media screen and (max-width: 250px) {
+    .sliderlabel {
+        margin: 0 0.5em;
+    }
 }
 
 #maybelabel {
@@ -28,4 +99,18 @@
 #copylink {
     grid-row: 3;
     grid-column: 2;
+    margin: 0 auto;
+    height: 3em;
+    border: none;
+    border-radius: 1em;
+    min-width: 8em;
+    background: purple;
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #333333;
+        color: #ffffff;
+    }
 }
