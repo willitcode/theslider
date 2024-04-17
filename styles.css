@@ -15,6 +15,7 @@ h1 {
 p {
     max-width: 50em;
     margin: 1em auto;
+    padding: 0 2em;
 }
 
 #slidercontainer {
