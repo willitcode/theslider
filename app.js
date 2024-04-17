@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000/"
+const BASE_URL = "https://willitcode.github.io/theslider/"
 
 function getCurrentSliderStateURL() {
     return BASE_URL + "?v=" + document.getElementById("slider").value;
