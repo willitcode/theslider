@@ -1,7 +1,11 @@
+const BASE_URL = "http://localhost:8000/"
+
+function getCurrentSliderStateURL() {
+    return BASE_URL + "?v=" + document.getElementById("slider").value;
+}
+
 function copyLink() {
-    var sliderValue = document.getElementById("slider").value;
-    /* TODO: storage for base url */
-    navigator.clipboard.writeText("http://localhost:8000/?v=" + sliderValue);
+    navigator.clipboard.writeText(getCurrentSliderStateURL());
 };
 
 function setSlider() {
@@ -11,3 +15,9 @@ function setSlider() {
         /* can't decide if I should disable the slider or not... I don't think I should */
     };
 };
+
+function setupSliderEventListener() {
+    document.getElementById("slider").oninput = function() {
+        history.replaceState(null, "", getCurrentSliderStateURL());
+    }
+}
