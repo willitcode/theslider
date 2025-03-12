@@ -109,6 +109,14 @@ p {
     color: white;
 }
 
+#copylink:hover {
+    background: #cc00cc;
+}
+
+#copylink:active {
+    background: purple;
+}
+
 @media (prefers-color-scheme: dark) {
     html {
         background-color: #333333;
