@@ -1,4 +1,4 @@
-const BASE_URL = "https://willitcode.github.io/theslider/"
+const BASE_URL = "https://theslider.willitcode.com/"
 
 function getCurrentSliderStateURL() {
     return BASE_URL + "?v=" + document.getElementById("slider").value;
